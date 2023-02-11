@@ -17,6 +17,9 @@
     --text-color: #020307;
     --bg-color: #fff;
 }
+h1{
+    font-size: 27px;
+}
 
 body {
     background: var(--text-color);
@@ -108,7 +111,7 @@ header {
 
 .conatiner {
     width: 100%;
-    min-height: 900px;
+    min-height: 920px;
     position: relative;
     display: flex;
     align-items: center;
@@ -123,7 +126,7 @@ header {
     object-fit: cover;
     object-position: center;
     z-index: -1;
-
+   
 }
 
 .swiper-pagination-bullet {
@@ -161,6 +164,7 @@ header {
     position: absolute;
     right: 4rem;
     bottom: 10%;
+    display: none;
 
 }
 
@@ -222,3 +226,29 @@ header {
 .box span{
      font-size: 13px;
 }
+
+.container-creator{
+    max-width: 968px;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 1rem;
+}
+
+
+.creator{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.api-flask{
+    color: var(--bg-color);
+    text-decoration: none;
+
+}
+.api img{
+    height: 20%;
+    width: 20%;
+   
+}
+
