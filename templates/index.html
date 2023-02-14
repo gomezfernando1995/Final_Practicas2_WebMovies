@@ -16,14 +16,14 @@
 <body>
     <!-- Navbar-->
     <header>
-        <a href=#" class="logo">
+        <a href="{{url_for('index') }}" class="logo">
             <img src="/static/img/yoicon.png" alt="" width="35px" height="30px">
             <h1>Reco-P</h1>
         </a>
         <div class="bx bx-menu" id="menu-icon"></div>
         <!-- Menu-->
         <ul class="navbar">
-            <li><a href="#" ">Inicio</a></li>
+            <li><a href="{{url_for('index') }}">Inicio</a></li>
             <li><a href=" #movies">Peliculas</a></li>
             <li><a href="#creator">Autor</a></li>
         </ul>
@@ -38,11 +38,12 @@
             <div class="swiper-slide conatiner">
                 <img src="{{poster_back}}{{movies_pop['backdrop_path']}}" alt="">
                 <div class="home-text">
-                    <span>{{movies_pop['production_companies'['0'['name']]]}}</span>
+
+                    <span>{{ movies_pop['production_companies'] }}</span>
                     <h1>{{movies_pop['title']}}</h1>
 
-                    <a href="https://youtube.com/watch?v={{url_movie}}{{movies_pop['id']}}{{video}}" class="btn" target="
-                    ">Ver Trailer</a>
+                    <a href="https://youtube.com/watch?v={{url_movie}}{{movies_pop['id']}}{{video}}" class="btn"
+                        target="_blank">Ver Trailer</a>
                     <a href="#" class="play">
                         <i class='bx bx-play'></i>
                     </a>
@@ -55,6 +56,16 @@
     </section>
 
     <!-- Peliculas -->
+    <div class="container-form">
+        <form action="/" method="POST">
+            <div class="search">
+                <input type="search" class="input-search" autocomplete="off" name="search"
+                    placeholder="Ingrese numero de pagina..">
+                <button class="btn-search" type="submit">Buscar</button>
+            </div>
+        </form>
+    </div>
+
     <section class="movies" id="movies">
         <h2 class="heanding">Tendencia del Mes</h2>
         <!-- Container Peliculas -->
@@ -79,7 +90,7 @@
         <h2 class="heanding">Creado por :</h2>
         <div class="container-creator">
             <div class="creator">
-                <p>© 2023 Gomez Gabriel Fernando ..</p>
+                <p>© 2023 Gomez Gabriel Fernando</p>
                 <p> <i class='bx bx-play'></i>Este Proyecto fue creador para el final de Practicas profesionalizantes 2.
                 </p>
                 <p> <i class='bx bxs-hand-right'></i>Api Utilizada : <a target="_blank"
@@ -89,16 +100,30 @@
                 <p> <i class='bx bxs-hand-right'></i>Framework Utilizado : <a target="_blank"
                         href="https://flask.palletsprojects.com/en/2.2.x/" class="api-flask">Flask</a> </p>
 
+
             </div>
+
+        </div>
+        <div class="social">
+            <img src="/static/img/github.png" alt="">
+            <li> <a href="#" target="_blank" class="icon-github"></a>  </li>
+            <li><a href="" target="_blank" class="icon-linked"><img src="/static/img/linkedin.png" alt=""></a></li>
+            <li><a href="http://www.googleplus.com/falconmasters" target="_blank" class="icon-googleplus"><img
+                        src="/static/img/gmail.png" alt=""></a></li>
+
 
         </div>
 
     </section>
 
+
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- Js persolanizado-->
     <script src="/static/js/main.js"></script>
+
+
 </body>
 
 
